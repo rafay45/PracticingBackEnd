@@ -272,7 +272,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/products', (req, res) => {
-  res.send(Products)
+    res.send(Products)
 })
 app.listen(3000, () => {
     console.log('Server is runing at 3000');
