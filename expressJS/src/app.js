@@ -301,8 +301,11 @@ app.post('/add', (req, res) => {
 })
 
 app.put('/updateproduct', (req, res) => {
+    const getProduct = req.body
+    
  res.send({
-    "message": "updated"
+    "message": "updated",
+    getProduct
  })
 })
 
