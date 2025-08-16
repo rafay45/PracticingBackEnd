@@ -24,6 +24,7 @@ app.use(express.json())
 //     },
 // ])
 // })
+
 const Products = [
     {
         "id": 1,
@@ -268,12 +269,38 @@ const Products = [
 ]
 
 app.get('/', (req, res) => {
-    res.send('==> Hello World!')
+    res.send('==> Hello World!!')
 })
 
 app.get('/products', (req, res) => {
     res.send(Products)
 })
+
+let product = true
+app.post('/add', (req, res) => {
+    if (product) {
+        res.send(Products.push(
+            {
+                "id": 21,
+                "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+                "price": 201.89,
+                "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                "category": "men's clothing",
+                "image": "Comming Soon",
+                "rating": {
+                    "rate": 5.5,
+                    "count": 1500
+                }
+            }
+        ))
+    } else {
+        res.status(401).send({
+            message: "Product has not been added"
+        })
+    }
+})
+
+
 app.listen(3000, () => {
     console.log('Server is runing at 3000');
 
