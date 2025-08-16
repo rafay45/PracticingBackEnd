@@ -291,15 +291,26 @@ app.post('/add', (req, res) => {
                 "count": 1500
             }
         }
-       products.push(newProduct)
-       res.send(newProduct)
+        products.push(newProduct)
+        res.send(products)
     } else {
         res.status(401).send({
-            message: "Product has not been added"
+            "message": "Product has not been added"
         })
     }
 })
 
+app.put('/updateproduct', (req, res) => {
+ res.send({
+    "message": "updated"
+ })
+})
+
+app.delete('/deleteproduct', (req, res) => {
+    res.send({
+        "message": "Deleted"
+    })
+})
 
 app.listen(3000, () => {
     console.log('Server is runing at 3000');
