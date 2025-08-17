@@ -300,20 +300,30 @@ app.post('/add', (req, res) => {
     }
 })
 
-app.put('/updateproduct', (req, res) => {
-    const getProduct = req.body
-    
- res.send({
-    "message": "updated",
-    getProduct
- })
-})
+app.put('/updateproduct/:id', (req, res) => {
+    const { id } = req.params
+    const updateproduct = products.filter(product => {
+        product.id = id
+        product.title = "updated"
+    })
 
-app.delete('/deleteproduct', (req, res) => {
     res.send({
-        "message": "Deleted"
+        "message": id,
+        updateproduct,
+        products
     })
 })
+
+app.delete('/deleteproduct/:id', (req, res) => {
+    const { id } = req.params
+    const deleteProduct = products.find(product => product.id !== id)
+
+    res.send({
+        "message": "Deleted",
+        deleteProduct
+    })
+})
+
 
 app.listen(3000, () => {
     console.log('Server is runing at 3000');
