@@ -1,67 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #1e293b;
+  padding: 40px;
+  color: #fff;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #1e293b; /* Changed background color */
-      padding: 40px;
-      color: #fff;
-    }
-    .todo-container {
-      max-width: 400px;
-      margin: auto;
-      background: rgba(0,0,0,0.6);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-    }
-    h2 {
-      margin-top: 0;
-      text-align: center;
-      color: #fff;
-    }
-    .input-row {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-    .input-row input {
-      flex: 1;
-      padding: 10px;
-      border: none;
-      border-radius: 4px;
-      outline: none;
-    }
-    .input-row button {
-      padding: 10px 14px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      color: #fff;
-      font-weight: bold;
-    }
-    .add-btn { background: #22c55e; }
-    .edit-btn { background: #3b82f6; }
-    .delete-btn { background: #ef4444; }
-    ul { list-style: none; padding: 0; margin: 0; }
-    li {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(255,255,255,0.1);
-      padding: 10px;
-      border-radius: 6px;
-      margin-bottom: 10px;
-    }
-    li span {
-      flex: 1;
-      color: #f1f5f9;
-    }
-    li button {
-      margin-left: 6px;
-      padding: 6px 10px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      color: #fff;
-      font-size: 14px;
-      font-weight: bold;
-    }
+.todo-container {
+  max-width: 400px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #fff;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.input-row button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+}
+
+.add-btn {
+  background: #22c55e;
+}
+
+.edit-btn {
+  background: #3b82f6;
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+li span {
+  flex: 1;
+  color: #f1f5f9;
+}
+
+li button {
+  margin-left: 6px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+}
